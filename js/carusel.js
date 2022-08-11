@@ -17,11 +17,11 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'POST',
-            url: 'https://formsubmit.co/ajax/sharon.camilabf@gmail.com',
+            url: 'https://formsubmit.co/ajax/ventas@mur-tecno.com.pe',
             dataType: 'json',
             accepts: 'application/json',
             data: {
-                _subject: "Consulta desde PAGINA WEB MUR TECNOLOGÍA",
+                _subject: "PAGINA WEB MUR TECNOLOGÍA - consulta cliente",
                 name: "MUR TECNOLOGÍA\n" + datosCli,
                 message: consultaCli
             },
