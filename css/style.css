@@ -3970,10 +3970,6 @@ a > .imgwsp{
     justify-content: center;
 }
 
-.serv-alquiler .cont-alquiler{
-    /* background-color: #0467F1; */
-}
-
 .alquiler{
     /* background: linear-gradient(360deg, #00D2FF 0%, #3A7BD5 100%); */
     /* background: linear-gradient(0deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%); */
@@ -3985,12 +3981,17 @@ a > .imgwsp{
     margin-right:7%;
 }
 
+.cont-alquiler .title-alq p {
+    font-size: 25px;
+}
+
 .title-alq, .title-form{
     color: white;
 }
 
 .img-alq img{
     width: 100%;  
+    animation: movimiento 3s linear infinite;
 }
 
 .form-alqui{
@@ -4022,4 +4023,17 @@ a > .imgwsp{
 
 #btn_enviar_cotizacion{
     border: solid 1px white;
+}
+
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
