@@ -203,6 +203,12 @@ a:hover {
     color: var(--main-color);
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 code {
     font-size: 87.5%;
     color: #e83e8c;
@@ -1042,7 +1048,7 @@ select {
     margin-bottom: 1rem;
     border-radius: var(--el-border-radius-min);
     border: 1px solid var(--border-color);
-    background-color: transparent;
+    /* background-color: transparent; */
     outline: none;
     color: var(--text-primary);
     box-shadow: none;
@@ -3884,6 +3890,16 @@ a > .imgwsp{
         width: 45%;
     }
 
+    .serv-alquiler .cont-alquiler{
+        max-width: 30rem;
+        margin:15px;
+    }
+
+    .serv-alquiler .form-alqui{
+        max-width: 30rem;  
+        margin: 0 10px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -3895,6 +3911,16 @@ a > .imgwsp{
         width: 55%;
     }
 
+    .serv-alquiler .cont-alquiler{
+        max-width: 30rem;
+        margin:15px;
+    }
+
+    .serv-alquiler .form-alqui{
+        max-width: 30rem;  
+        margin: 0 10px;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -3904,6 +3930,16 @@ a > .imgwsp{
 
     .carrusel2-img-logo-clientes {
         width: 60%;
+    }
+
+    .serv-alquiler .cont-alquiler{
+        max-width: 30rem;
+        margin:15px;
+    }
+
+    .serv-alquiler .form-alqui{
+        max-width: 30rem;  
+        margin: 0 10px;
     }
 
 }
@@ -3927,3 +3963,63 @@ a > .imgwsp{
     right: 10px;
 }
 
+.serv-alquiler{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.serv-alquiler .cont-alquiler{
+    /* background-color: #0467F1; */
+}
+
+.alquiler{
+    /* background: linear-gradient(360deg, #00D2FF 0%, #3A7BD5 100%); */
+    /* background: linear-gradient(0deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%); */
+    background: linear-gradient(180deg, #1C92D2 2.35%, #F2FCFE 100%);
+}
+
+.cont-alquiler{
+    max-width: 30rem;
+    margin-right:7%;
+}
+
+.title-alq, .title-form{
+    color: white;
+}
+
+.img-alq img{
+    width: 100%;  
+}
+
+.form-alqui{
+    max-width: 30rem;  
+    margin-left:5%;
+    
+}
+
+.formulario{
+    border: solid 1px white;
+    /* background: linear-gradient(90deg, #2C3E50 0%, #3498DB 100%); */
+    background: linear-gradient(90deg, #3A7BD5 0%, #3A6073 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formulario > .inputs{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title-form{
+    text-align: center;
+    padding: 25px;
+}
+
+#btn_enviar_cotizacion{
+    border: solid 1px white;
+}
