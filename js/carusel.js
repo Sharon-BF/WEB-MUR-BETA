@@ -5,7 +5,7 @@ $(document).ready(function () {
     });
 
     $('#enviarConsulta').click(function (e) {
-        //e.preventDefault();
+        e.preventDefault();
 
         apellidosCli = $('#input_apellido').val();
         nombresCli = $('#input_nombre').val();
@@ -13,22 +13,42 @@ $(document).ready(function () {
         celularCli = $('#input_celular').val();
         emailCli = $('#input_email').val();
         consultaCli = $('#input_consulta').val();
-        datosCli= 'Mensaje de:' +"\n"+ apellidosCli + "\n" + nombresCli +"\nEmail: "+emailCli +"\nCelular: "+celularCli;
+        datosCli = 'Mensaje de:' + "\n" + apellidosCli + "\n" + nombresCli + "\nEmail: " + emailCli + "\nCelular: " + celularCli;
 
-        $.ajax({
-            method: 'POST',
-            url: 'https://formsubmit.co/ajax/sharon.camilabf@gmail.com',
-            // url: 'https://formsubmit.co/ajax/ventas@mur-tecno.com.pe',
-            dataType: 'json',
-            accepts: 'application/json',
-            data: {
-                _subject: "PAGINA WEB MUR TECNOLOGÍA - consulta cliente",
-                name: "MUR TECNOLOGÍA\n" + datosCli,
-                message: consultaCli
-            },
-            success: (data) => console.log(data),
-            error: (err) => console.log(err)
-        });
+        if (apellidosCli == '' || nombresCli == '' || dniCli == '' || celularCli == '' || emailCli == '' || consultaCli == '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Llenar todos los campos',
+            })
+        }
+        else {
+            $.ajax({
+                method: 'POST',
+                url: 'https://formsubmit.co/ajax/ventas@mur-tecno.com.pe',
+                dataType: 'json',
+                accepts: 'application/json',
+                data: {
+                    _subject: "PAGINA WEB MUR TECNOLOGÍA - consulta cliente",
+                    name: "MUR TECNOLOGÍA\n" + datosCli,
+                    message: consultaCli
+                },
+                success: (data) => {
+                    Swal.fire(
+                        'Gracias',
+                        'Nos pondremos en contacto',
+                        'success'
+                    )
+                    apellidosCli = $('#input_apellido').val('');
+                    nombresCli = $('#input_nombre').val('');
+                    dniCli = $('#input_dni').val('');
+                    celularCli = $('#input_celular').val('');
+                    emailCli = $('#input_email').val('');
+                    consultaCli = $('#input_consulta').val('');
+                },
+                error: (err) => console.log(err)
+            })
+        };
     })
 
 
@@ -40,20 +60,19 @@ $(document).ready(function () {
         emailCoti = $('#alqinput_email').val();
         celCoti = $('#alqinput_celular').val();
         consulCoti = $('#alqinput_consulta').val();
-        datosCoti= 'Cliente: ' + clienteCoti + "\nDNI / RUC: "+ docCoti  + "\nEmail: "+ emailCoti +"\nCelular: "+celCoti;
+        datosCoti = 'Cliente: ' + clienteCoti + "\nDNI / RUC: " + docCoti + "\nEmail: " + emailCoti + "\nCelular: " + celCoti;
 
-        if(clienteCoti == '' || docCoti == '' || emailCoti == '' || celCoti == ''){
+        if (clienteCoti == '' || docCoti == '' || emailCoti == '' || celCoti == '') {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Llenar todos los campos',
-              })
+            })
         }
-        else{
+        else {
             $.ajax({
                 method: 'POST',
-                url: 'https://formsubmit.co/ajax/sharon.camilabf@gmail.com',
-                // url: 'https://formsubmit.co/ajax/ventas@mur-tecno.com.pe',
+                url: 'https://formsubmit.co/ajax/ventas@mur-tecno.com.pe',
                 dataType: 'json',
                 accepts: 'application/json',
                 data: {
@@ -66,12 +85,18 @@ $(document).ready(function () {
                         'Gracias',
                         'Nos pondremos en contacto',
                         'success'
-                      )
-                    },
+                    )
+
+                    clienteCoti = $('#alqinput_nombres').val('');
+                    docCoti = $('#alqinput_dni').val('');
+                    emailCoti = $('#alqinput_email').val('');
+                    celCoti = $('#alqinput_celular').val('');
+                    consulCoti = $('#alqinput_consulta').val('');
+                },
                 error: (err) => console.log(err)
             });
         }
-        
+
     })
 
 });

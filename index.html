@@ -173,19 +173,6 @@
                             <div class="col-auto header-fixed-col col-static">
                                 <!-- Begin header actions -->
                                 <ul class="header-actions">
-                                    <!-- Begin header languarge -->
-                                    <!-- <li class="d-none d-lg-block">
-                            <div class="header-lang">
-                                <div class="header-lang-current"><i class="material-icons md-22">language</i></div>
-                                <ul class="header-lang-list">
-                                    <li class="active"><a href="#!" class="hover-link" data-lang="En" data-title="English"><span>English</span></a></li>
-                                    <li><a href="#!" class="hover-link" data-lang="Sp" data-title="Spanish"><span>Spanish</span></a></li>
-                                    <li><a href="#!" class="hover-link" data-lang="It" data-title="Italian"><span>Italian</span></a></li>
-                                    <li><a href="#!" class="hover-link" data-lang="Uk" data-title="Ukraine"><span>Ukraine</span></a></li>
-                                    <li><a href="#!" class="hover-link" data-lang="Ru" data-title="Russian"><span>Russian</span></a></li>
-                                </ul>
-                            </div>
-                        </li>End header languarge -->
                                     <!-- Begin header navbar -->
                                     <li class="d-block d-lg-none">
                                         <div class="header-navbar">
@@ -323,7 +310,7 @@
                         <div class="modal-footer">
                             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                             <button id="enviarConsulta" type="button" class="btn btn-primary"
-                                data-bs-dismiss="modal">Send message</button>
+                                >Send message</button>
                         </div>
                     </div>
                 </div>
@@ -402,7 +389,8 @@
                                 <h3>Solicitar Cotización</h3>
                             </div>
 
-                            <form class="row needs-validation" novalidate>
+                            <form class="row">
+                                <input type="hidden" name="_autoresponse" value="Gracias por escribirnos, nos pondremos en contacto contigo">
 
                                 <div class="col-md-12 my-2">
                                     <input id="alqinput_nombres" type="text" class="form-control"  placeholder="Nombres y Apellidos / Razón Social" required>
@@ -417,9 +405,6 @@
                                     <input id="alqinput_email" type="email" class="form-control" placeholder="E-mail"
                                         required for="invalidCheck">
                                 </div>
-                                <div class="invalid-feedback">
-                                    You must agree before submitting.
-                                  </div>
 
                                 <div class="col-12 my-2">
                                     <input id="alqinput_celular" type="number" class="form-control" placeholder="Celular"
@@ -621,10 +606,7 @@
                             <div class="section-heading heading-center">
                                 <!-- <div class="section-subheading">The best</div> -->
                                 <h2>Nuestros Clientes</h2>
-                                <!-- <p class="section-desc">Our customers have disrupted industries, opened new markets, and
-                                    made countless lives better. We are privileged to work with hundreds of
-                                    future-thinking businesses, including many of the world’s top hardware, software,
-                                    and consumer brands.</p> -->
+
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4 col-6 item">
@@ -789,16 +771,6 @@
                                 </div>
                             </article><!-- End news item -->
                         </div>
-                        <!-- <div class="col-12">
-                            <div class="section-btns justify-content-center">
-                                <a href="news.html" class="btn btn-with-icon btn-w240 ripple">
-                                    <span>See All News</span>
-                                    <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9">
-                                        <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </section><!-- End latest news -->
@@ -854,13 +826,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                    <!-- <li>
-                                        <a href="#!" title="Twitter">
-                                            <svg viewBox="0 0 512 512">
-                                                <use xlink:href="assets/img/sprite.svg#twitter-icon"></use>
-                                            </svg>
-                                        </a>
-                                    </li> -->
+
                                 </ul>
                             </div>
                             <!-- End company info -->
@@ -885,25 +851,7 @@
                                 </nav>
                             </div>
                         </div>
-                        <!-- <div class="col-xl-2 col-lg-3 col-md-3 col-7 item">
-                            <div class="footer-item">
-                                <p class="footer-item-heading">What We Offer</p>
-                                <nav class="footer-nav">
-                                    <ul class="footer-mnu">
-                                        <li><a href="#!" class="hover-link" data-title="DB Management"><span>DB
-                                                    Management</span></a></li>
-                                        <li><a href="#!" class="hover-link"
-                                                data-title="IOS/MacOS"><span>IOS/MacOS</span></a></li>
-                                        <li><a href="#!" class="hover-link" data-title="Android Apps"><span>Android
-                                                    Apps</span></a></li>
-                                        <li><a href="#!" class="hover-link" data-title="Windows Apps"><span>Windows
-                                                    Apps</span></a></li>
-                                        <li><a href="#!" class="hover-link" data-title="UX & UI"><span>UX &
-                                                    UI</span></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div> -->
+
                         <div class="col-xs-4 col-lg-4 col-12 item">
                             <div class="footer-item">
                                 <p class="footer-item-heading">Información</p>
@@ -932,19 +880,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- <div class="footer-item">
-                                <p class="footer-item-heading">Subscribe</p>
-                                <form action="#!" method="post" class="footer-subscribe">
-                                    <div class="form-field">
-                                        <label for="subscribe-email" class="form-field-label">Your email</label>
-                                        <input type="email" class="form-field-input" name="Subscribe_email" value=""
-                                            autocomplete="off" required="required" id="subscribe-email">
-                                    </div>
-                                    <div class="form-btn">
-                                        <button type="submit" class="btn ripple"><span>Subscribe</span></button>
-                                    </div>
-                                </form>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -952,14 +887,6 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="row justify-content-between items">
-                        <!-- <div class="col-md-auto col-12 item">
-                            <nav class="footer-links">
-                                <ul>
-                                    <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
-                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                </ul>
-                            </nav>
-                        </div> -->
                         <div class="col-md-auto col-12 item">
                             <div class="copyright">© 2022 MUR TECNOLOGÍA.</div>
                         </div>
